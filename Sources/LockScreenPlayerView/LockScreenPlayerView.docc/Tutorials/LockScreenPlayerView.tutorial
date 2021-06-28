@@ -1,0 +1,15 @@
+@Tutorials(name: "LockScreenPlayerView") {
+	@Intro(title: "Meet LockScreenPlayerView") {
+		Create and configure lock screen player views. Get started by adding the view to the demo app _Locky_.
+		
+		@Image(source: tutorials-intro.png, alt: "4 different versions of lock screen player views stacked on top of each other from the top left to the bottom right")
+	}
+	
+	@Chapter(name: "LockScreenPlayerView Essentials") {
+		@Image(source: tutorials-intro.png, alt: "A wireframe of an app interface that has an outline of a sloth and four buttons below the sloth. The buttons display the following symbols, from left to right: snowflake, fire, wind, and lightning.")
+		Create different versions of LockScreenPlayerViews.
+		
+		@TutorialReference(tutorial: "doc:Creating-Lock-Screen-Player-Views")
+	}
+}
+

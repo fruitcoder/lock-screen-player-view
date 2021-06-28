@@ -1,0 +1,17 @@
+▿ Optional<Dictionary<String, Any>>
+  ▿ some: 5 key/value pairs
+    ▿ (2 elements)
+      - key: "MPNowPlayingInfoPropertyIsLiveStream"
+      - value: true
+    ▿ (2 elements)
+      - key: "MPNowPlayingInfoPropertyPlaybackRate"
+      - value: 1.0
+    ▿ (2 elements)
+      - key: "albumTitle"
+      - value: "Best Of"
+    ▿ (2 elements)
+      - key: "artist"
+      - value: "Cool artist"
+    ▿ (2 elements)
+      - key: "title"
+      - value: "Some title"

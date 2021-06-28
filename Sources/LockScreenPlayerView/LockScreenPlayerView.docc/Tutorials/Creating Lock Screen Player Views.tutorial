@@ -1,0 +1,39 @@
+@Tutorial(time: 5) {
+	@Intro(title: "Using LockScreenPlayerView") {
+		This tutorial guides you through building _Locky_ — an app for displaying a lock screen player view.
+	}
+	
+	@Section(title: "Create a new project and add LockScreenPlayerView") {
+		@ContentAndMedia(layout: horizontal) {
+			Create and configure an Xcode project that uses LockScreenPlayerView.
+			
+			@Image(source: create-project.png, alt: "alt")
+		}
+		
+		@Steps {
+			@Step {
+				Create a new project using the iOS App template.
+
+				@Image(source: create-project.png, alt: "A screenshot of the template selector in Xcode. In the top row, iOS is selected as the platform. In the Application section, App is selected as the template; there's a highlight placed over the Next button at the lower-right of the sheet")
+			}
+			
+			@Step {
+				Enter "Locky" as the Product Name. 
+				
+				@Image(source: name-project.png, alt: "A screenshot of the project sheet, which shows the Product Name for the app being built as Locky. The Interface is set to SwiftUI, and the Life Cycle is set to SwiftUI App.")
+			}
+			
+			@Step {
+				Select "SwiftUI" from the Interface pop-up menu and "SwiftUI App" from the Life Cycle pop-up menu, then click Next. Choose a location to save the Locky project on your Mac.
+				
+				@Image(source: name-project.png, alt: "A screenshot of the project sheet, which shows the Product Name for the app being built as Locky. The Interface is set to SwiftUI, and the Life Cycle is set to SwiftUI App.")
+			}
+			
+			@Step {
+				Add `LockScreenPlayerView` as a dependency to the project.
+				
+				@Image(source: tutorials-intro.png, alt:"A screenshot shows the LockScreenPlayerView package in Xcode's navigator.")
+			}
+		}
+	}
+}
