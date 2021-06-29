@@ -34,6 +34,8 @@ Although the primary use is to include the target in your test targets it can th
 
 Checkout the `LockScreenPlayerViewTests` to see how to integrate a snapshotting library like [https://github.com/pointfreeco/swift-snapshot-testing](swift-snapshot-testing) and write tests for different states of the lock screen player view.
 
+![Screenshot of snapshot test code on the left and snapshot images on the right](./test-sample.png)
+
 ## Installation
 
 ### Xcode 11
@@ -47,7 +49,7 @@ Checkout the `LockScreenPlayerViewTests` to see how to integrate a snapshotting 
 
 ##### Dependencies
 
-This package uses the `swift-snapshot-test` repository from [https://github.com/pointfreeco/swift-snapshot-testing](pointfree) for its tests but the view itself could also be used without a snapshot framework. In case you use *any* snapshot framework there is the usual disclaimer to always use the same simulator and iOS version (in my case iPhone 8 with 14.5).
+This package uses the `swift-snapshot-test` repository from [https://github.com/pointfreeco/swift-snapshot-testing](pointfree) for its tests but the view itself could also be used without a snapshot framework. In case you use *any* snapshot framework there is the usual disclaimer to always use the same simulator and iOS version (in my case iPhone 8 Plus with 14.5).
 
 ## Documentation	
 

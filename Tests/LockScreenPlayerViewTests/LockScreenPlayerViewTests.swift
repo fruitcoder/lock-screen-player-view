@@ -93,8 +93,9 @@ final class LockScreenPlayerViewTests: XCTestCase {
 
 		player.pause()
 
-		assertSnapshot(matching: view, as: .image(layout: .device(config: .iPhone8Plus), traits: .init(userInterfaceStyle: .light)), named: "light-paused")
-		assertSnapshot(matching: view, as: .image(layout: .device(config: .iPhone8Plus), traits: .init(userInterfaceStyle: .dark)), named: "dark-paused")
+		let pausedView = LockScreenPlayerView(remoteCommandCenter: .shared()).embedInContainer()
+		assertSnapshot(matching: pausedView, as: .image(layout: .device(config: .iPhone8Plus), traits: .init(userInterfaceStyle: .light)), named: "light-paused")
+		assertSnapshot(matching: pausedView, as: .image(layout: .device(config: .iPhone8Plus), traits: .init(userInterfaceStyle: .dark)), named: "dark-paused")
 	}
 
 	func testMediaPlayerSleepMode() {
