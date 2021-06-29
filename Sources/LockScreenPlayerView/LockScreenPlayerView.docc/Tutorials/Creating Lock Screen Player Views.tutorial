@@ -7,7 +7,7 @@
 		@ContentAndMedia(layout: horizontal) {
 			Create and configure an Xcode project that uses LockScreenPlayerView.
 			
-			@Image(source: create-project.png, alt: "alt")
+			@Image(source: tutorials-intro.png, alt: "4 different versions of lock screen player views stacked on top of each other from the top left to the bottom right")
 		}
 		
 		@Steps {
@@ -30,9 +30,87 @@
 			}
 			
 			@Step {
-				Add `LockScreenPlayerView` as a dependency to the project.
+				Go to _File > Add Packages..._ and enter `https://github.com/fruitcoder/lock-screen-player-view.git` in the search. Use the default _Dependency Rule_.
 				
-				@Image(source: tutorials-intro.png, alt:"A screenshot shows the LockScreenPlayerView package in Xcode's navigator.")
+				@Image(source: add-package1.png, alt: "A screenshot shows the LockScreenPlayerView's Github url pasted in the Swift Package manager's search field.")
+			}
+			
+			@Step {
+				Choose the _Locky_ target and hit Add Package.
+				
+				@Image(source: add-package2.png, alt: "A screenshot shows the LockScreenPlayerView's package being added to the Locky target.")
+			}
+		}
+	}
+	
+	@Section(title: "Add a lock screen player view") {
+		@ContentAndMedia(layout: horizontal) {
+			Add a lock screen player view to one of your SwiftUI views.
+			
+			@Image(source: tutorials-intro.png, alt: "4 different versions of lock screen player views stacked on top of each other from the top left to the bottom right")
+		}
+		
+		@Steps {
+			@Step {
+				Navigate to your ContentView
+				
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-01.swift) {
+					@Image(source: 01-01-preview-01.png, alt: "A screenshot from the Xcode preview as it would appear on iPhone, with the text, Hello, World!, centered in the middle of the display.")
+				}
+			}
+			
+			@Step {
+				Import the `LockScreenPlayerView` package.
+				
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-02.swift) {
+					@Image(source: 01-01-preview-01.png, alt: "A screenshot from the Xcode preview as it would appear on iPhone, with the text, Hello, World!, centered in the middle of the display.")
+				}
+			}
+			
+			@Step {
+				Delete the template `Text` view, then add a new `VStack` with trailing padding.
+				
+				This adds space around and between any views inside.
+				
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-03.swift) {
+					@Image(source: 01-01-preview-02.png, alt: "A screenshot of a blank preview canvas.")
+				}
+			}
+			
+			@Step {
+				Add a `LockScreenPlayerView` with an empty initializer to the `VStack`.
+				
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-04.swift) {
+					@Image(source: 01-01-preview-03.png, alt: "A screenshot of a lock screen player view of an on demand asset.")
+				}
+			}
+			
+			@Step {
+				Add another `LockScreenPlayerView` with the explicit initializer ``LockScreenPlayerView/LockScreenPlayerView/init(assetKind:audioRouteName:leftControl:playbackControl:rightControl:subtitle:title:)`` below the first lock screen player view.
+				
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-05.swift) {
+					@Image(source: 01-01-preview-03.png, alt: "A screenshot of a lock screen player view of an on demand asset.")
+				}
+			}
+			
+			@Step {
+				Give the view an `.livestream` `assetKind` and an `.enabled(.previousTrack)` `leftControl`. Use `.enabled(.stop)` as `playbackControl` and `.enabled(.nextTrack)` as `rightControl`. 
+				
+				Delete the other parameters.
+
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-06.swift) {
+					@Image(source: 01-01-preview-04.png, alt: "A screenshot of a two lock screen players stacked vertically. On top there is a view of an on demand asset, on the bottom a view of a livestream asset.")
+				}
+			}
+			
+			@Step {
+				In the `ContentView_Previews` add a `.environment(\.colorScheme, .dark)` modifier to the `ContentView` to see how it looks in dark mode. 
+				
+				Congratulations! Now you can add the lock screen player view to your snapshot test and ensure changes to code that deals with the now playing info doesn't introduce regression bugs 🚀
+				
+				@Code(name: "ContentView.swift", file: 01-01-creating-views-07.swift) {
+					@Image(source: 01-01-preview-05.png, alt: "A screenshot of a lock screen player view of an on demand asset.")
+				}
 			}
 		}
 	}

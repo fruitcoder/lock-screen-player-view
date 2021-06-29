@@ -30,6 +30,10 @@ LockScreenPlayerView(remoteCommandCenter: .shared())
 
 Although the primary use is to include the target in your test targets it can theoretically also be used in your feature modules. 
 
+##### Tests
+
+Checkout the `LockScreenPlayerViewTests` to see how to integrate a snapshotting library like [https://github.com/pointfreeco/swift-snapshot-testing](swift-snapshot-testing) and write tests for different states of the lock screen player view.
+
 ## Installation
 
 ### Xcode 11
@@ -43,4 +47,10 @@ Although the primary use is to include the target in your test targets it can th
 
 ##### Dependencies
 
-This package uses the `swift-snapshot-test` repository from (pointfree)[https://github.com/pointfreeco/swift-snapshot-testing] for its tests but the view itself could also be used without a snapshot framework. In case you use *any* snapshot framework there is the usual disclaimer to always use the same simulator and iOS version (in my case iPhone 8 with 14.5).
+This package uses the `swift-snapshot-test` repository from [https://github.com/pointfreeco/swift-snapshot-testing](pointfree) for its tests but the view itself could also be used without a snapshot framework. In case you use *any* snapshot framework there is the usual disclaimer to always use the same simulator and iOS version (in my case iPhone 8 with 14.5).
+
+## Documentation	
+
+I played around with DocC a little and added a little tutorial to add a `LockScreenPlayerView` to your SwiftUI views. Actually, I planned to add another tutorial on how to write snapshot tests with this view but then I found out you can't host compiled DocC documentation on Github pages so my motivation dropped 😅
+
+[./Sources/LockScreenPlayerView/LockScreenPlayerView.docc/Resources/tutorials-art/tutorial-!scroll-through.gif](Video of scrolling through the "Using LockScreenPlayerView" tutorial)
