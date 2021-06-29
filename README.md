@@ -53,4 +53,4 @@ This package uses the `swift-snapshot-test` repository from [https://github.com/
 
 I played around with DocC a little and added a little tutorial to add a `LockScreenPlayerView` to your SwiftUI views. Actually, I planned to add another tutorial on how to write snapshot tests with this view but then I found out you can't host compiled DocC documentation on Github pages so my motivation dropped 😅
 
-![./Sources/LockScreenPlayerView/LockScreenPlayerView.docc/Resources/tutorials-art/tutorial-scroll-through.gif](Video of scrolling through the "Using LockScreenPlayerView" tutorial)
+![Video of scrolling through the "Using LockScreenPlayerView" tutorial](./Sources/LockScreenPlayerView/LockScreenPlayerView.docc/Resources/tutorials-art/tutorial-scroll-through.gif)
